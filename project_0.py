@@ -232,7 +232,7 @@ def access_user():
 
 def create_user():
     name = input("New user name: ")
-    while name not in users_dict.keys():
+    while name in users_dict.keys():
         name = input("Please choose a name that isn't taken: ")
     user = User(name)
     users_dict[name] = user
